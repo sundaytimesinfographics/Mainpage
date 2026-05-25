@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Interactive Infographics & Data Journalism | The Sunday Times Sri Lanka
+    </title>
+    <meta
+      name="description"
+      content="Explore Sri Lanka's first interactive news infographic portal by The Sunday Times. Immersive scrollytelling, interactive maps, and data journalism on national trends, history, and public safety."
+    />
+    <meta
+      name="keywords"
+      content="interactive infographics Sri Lanka, Sunday Times Sri Lanka data journalism, scrollytelling Sri Lanka, digital storytelling Sri Lanka, data visualization Sri Lanka"
+    />
+
+    <link rel="canonical" href="https://sundaytimes.lk/graphics/" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-2SHCGQB8G3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2SHCGQB8G3");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6SH4BQN6PW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-6SH4BQN6PW");
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #153357;
+        color: #ffffff;
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .masthead {
+        background-color: #0065ad;
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+      }
+
+      .masthead-inner {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .masthead-left img,
+      .masthead-right img {
+        height: 35px;
+        width: auto;
+        display: block;
+      }
+
+      .logo-mobile {
+        display: none !important;
+      }
+      .logo-full {
+        display: block !important;
+      }
+
+      .hub-container {
+        max-width: 1400px;
+        margin: 120px auto 60px;
+        padding: 0 40px;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .project-card {
+        background-color: #1c436b;
+        border-radius: 4px;
+        overflow: hidden;
+        text-decoration: none;
+        color: #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      }
+
+      .card-image-placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background-color: #0d2138;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .card-image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 24px;
+        flex-grow: 1;
+      }
+
+      .card-content h2 {
+        font-family: "Merriweather", serif;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+        color: #ffffff;
+      }
+
+      .card-content p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      @media (max-width: 600px) {
+        .hub-container {
+          padding: 0 20px;
+        }
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .logo-full {
+          display: none !important;
+        }
+        .logo-mobile {
+          display: block !important;
+        }
+
+        .masthead-inner {
+          padding: 0 15px;
+        }
+      }
+
+      .card-content h2 {
+        font-family: "Merriweather", serif;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 8px; /* Slightly reduced margin */
+        color: #ffffff;
+      }
+
+      .card-content p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 12px;
+      }
+
+      /* New style for the upload dates */
+      .card-date {
+        font-size: 0.8rem !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.5) !important;
+        margin-bottom: 0 !important;
+        margin-top: auto; /* Pushes date to the bottom of the card */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="masthead">
+      <div class="masthead-inner">
+        <div class="masthead-left">
+          <a
+            href="https://sundaytimes.lk/"
+            aria-label="Go to Sunday Times Home"
+          >
+            <img
+              src="assets/images/st-logo-full.svg"
+              alt="Sunday Times"
+              class="logo-full"
+            />
+            <img
+              src="assets/images/st-logo-mobile.svg"
+              alt="ST"
+              class="logo-mobile"
+            />
+          </a>
+        </div>
+        <div class="masthead-right">
+          <img src="assets/images/infographics-logo.svg" alt="Infographics" />
+        </div>
+      </div>
+    </nav>
+
+    <div class="hub-container">
+      <div class="project-grid">
+        <a
+          href="https://sundaytimesinfographics.github.io/SapthaKanya/"
+          class="project-card"
+          aria-label="Read investigation: A Tragedy in the Skies"
+        >
+          <div class="card-image-placeholder">
+            <img
+              src="assets/images/thumb-1.webp"
+              alt="3D illustration of a plane crashing into a mountain range at night"
+            />
+          </div>
+          <div class="card-content">
+            <h2>A Tragedy in the Skies</h2>
+            <p>
+              On December 4, 2025, it marked 51 years since the tragic Martinair
+              Flight 138 plane crash in the Saptha Kanya mountain range. This
+              event is recognized as the deadliest aviation disaster in Sri
+              Lankan history.
+            </p>
+            <p class="card-date">Uploaded: December 04, 2025</p>
+          </div>
+        </a>
+
+        <a
+          href="https://sundaytimesinfographics.github.io/GoneTooSoon/"
+          class="project-card"
+          aria-label="Read investigation: Gone Too Soon"
+        >
+          <div class="card-image-placeholder">
+            <img
+              src="assets/images/thumb-2.webp"
+              alt="3D rendering of a large crowd of people representing mortality statistics"
+            />
+          </div>
+          <div class="card-content">
+            <h2>Gone Too Soon</h2>
+            <p>
+              Data indicate that deaths from ischemic heart disease in young
+              people have more than doubled over the past decade.
+            </p>
+            <p class="card-date">Uploaded: January 26, 2026</p>
+          </div>
+        </a>
+
+        <a
+          href="https://sundaytimesinfographics.github.io/GunViolence/"
+          class="project-card"
+          aria-label="Read investigation: Gun Violence in 2025"
+        >
+          <div class="card-image-placeholder">
+            <img
+              src="assets/images/thumb-3.webp"
+              alt="Close up of a handgun being fired"
+            />
+          </div>
+          <div class="card-content">
+            <h2>Gun Violence in 2025</h2>
+            <p>
+              Gun violence claimed sixty lives in 2025. Through this data
+              analysis, we examine the impact of these events and the statistics
+              that defined the past year.
+            </p>
+            <p class="card-date">Uploaded: March 21, 2026</p>
+          </div>
+        </a>
+
+        <div class="project-card">
+          <div class="card-image-placeholder"></div>
+        </div>
+        <div class="project-card">
+          <div class="card-image-placeholder"></div>
+        </div>
+        <div class="project-card">
+          <div class="card-image-placeholder"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
